@@ -2,21 +2,23 @@ package cucumber.steps;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import screens.CandidateMainScreen;
-import screens.JobScreen;
-import screens.SelectionScreen;
-import screens.SplashScreen;
+import screens.*;
 
 public class BaseSteps {
-    protected SplashScreen        splashScreen;
-    protected SelectionScreen     selectionScreen;
-    protected CandidateMainScreen candidateMainScreen;
-    protected JobScreen           jobScreen;
+    protected PreAppMainScreen           PreAppMainScreen;
+    protected PepperAppMainScreen        PepperAppMainScreen;
+    protected BaseScreen        BaseScreen;
+    protected CheckMyself        CheckMyself;
+    protected SerchPersnLimit        SerchPersnLimit;
+    
 
-    public void setupScreens(AndroidDriver<MobileElement> driver) {
-        splashScreen = new SplashScreen(driver);
-        selectionScreen = new SelectionScreen(driver);
-        candidateMainScreen = new CandidateMainScreen(driver);
-        jobScreen = new JobScreen(driver);
+    public void preset(AndroidDriver<MobileElement> driver) {
+        
+        // 각 Screen의 객체들을 미리 선언해둔다
+        PreAppMainScreen = new PreAppMainScreen(driver);
+        PepperAppMainScreen = new PepperAppMainScreen(driver);
+        BaseScreen = new BaseScreen(driver);
+        CheckMyself = new CheckMyself(driver);
+        SerchPersnLimit = new SerchPersnLimit(driver);
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [페퍼저축은행 간편 신용대출 한도조회 테스트]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="cucumber and testng(failed)">
+    <parameter name="platformVersion" value="8"/>
+    <parameter name="udid" value="ce11160ba49b0c2704"/>
+    <classes>
+      <class name="cucumber.tests.TestRunner">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setup"/>
+          <include name="setUpClass"/>
+          <include name="scenario" invocation-numbers="0"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- cucumber.tests.TestRunner -->
+    </classes>
+  </test> <!-- cucumber and testng(failed) -->
+</suite> <!-- Failed suite [페퍼저축은행 간편 신용대출 한도조회 테스트] -->

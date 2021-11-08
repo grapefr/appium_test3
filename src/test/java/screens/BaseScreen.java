@@ -3,6 +3,8 @@ package screens;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import java.util.List;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -37,7 +39,10 @@ public class BaseScreen {
         return waitAndFindElement(by).getText();
     }
 
-    protected void sendKey(By by, String text) {
-        waitAndFindElement(by).sendKeys(text);
+    protected void changeContextWeb() {
+    	driver.context("WEBVIEW_kr.pepper.digitalbank");
+    }
+    protected void changeContextNative() {
+    	driver.context("NATIVE_APP");
     }
 }

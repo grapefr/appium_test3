@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
     monochrome = true,
-    tags = "@Candidate",
+    tags = "@MainView",
     features = "src/test/java/cucumber/features",
     glue = "cucumber.steps",
     publish = true
@@ -30,8 +30,9 @@ public class TestRunner extends BaseTest {
     }
 
     @DataProvider
-    public Object[][] scenarios() {
-        return testNGCucumberRunner.provideScenarios();
+    public Object[][] scenarios()
+    {
+        return this.testNGCucumberRunner.provideScenarios();//this method provides all the features
     }
 
     @AfterClass(alwaysRun = true)

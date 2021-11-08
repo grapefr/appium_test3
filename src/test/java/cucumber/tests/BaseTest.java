@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeMethod
     @Parameters({ "udid", "platformVersion" })
-    public void setup(String udid, String platformVersion) throws IOException {
+    public void setup( String udid, String platformVersion) throws IOException {
         DesiredCapabilities caps = desiredCapabilitiesUtil.getDesiredCapabilities(udid, platformVersion);
         ThreadLocalDriver.setTLDriver(new AndroidDriver<>(new URL("http://127.0.0.1:4444/wd/hub"), caps));
     }
